@@ -1,9 +1,25 @@
-.heading {
+.bigtext {
   font-family: var(--font-main);
-  font-size: 1rem;
+  font-size: 5rem;
   font-weight: 600;
+  line-height: 120%;
+  margin-top: 128px;
 }
 
-.section {
-  margin-top: 32px;
+.gt {
+  color: var(--color-gt);
+}
+
+.ixd {
+  color: var(--color-ixd);
+}
+
+.vg {
+  color: var(--color-vg);
+}
+
+@media screen and (max-width: 768px) {
+  .bigtext {
+    font-size: 3rem;
+  }
 }

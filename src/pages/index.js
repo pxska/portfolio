@@ -1,24 +1,31 @@
 import Link from 'next/link';
+
 import styles from '@/styles/Index.module.scss';
 
 export default function Index() {
   return (
     <>
-      <h1 className={styles.heading}>Kristjan Poska</h1>
+      <section className={styles.bigtext}>
+        Hey, my name is Kristjan. I am a front-end developer with a sincere love
+        for <em>pixel perfection</em>. I strive for the highest possible quality
+        in everything I do. I currently work as a front-end developer at{' '}
+        <Link className={styles.gt} href="https://guardtime.com/">
+          Guardtime
+        </Link>{' '}
+        and study{' '}
+        <Link className={styles.ixd} href="https://ixd.ma/">
+          Interaction Design
+        </Link>{' '}
+        at the Estonian Academy of Arts. In the past, I have worked on{' '}
+        <Link className={styles.vg} href="https://voog.com/">
+          Voog
+        </Link>
+        , the best CMS in the Baltics.
+      </section>
 
-      <section className={styles.section}>
-        <p>
-          Striving for <em>perfection</em> in everything I do. Experimenting
-          with all the unseen details in user interfaces. Front-end developer at{' '}
-          <Link href="https://guardtime.com/">Guardtime</Link>. Interaction
-          Design student at <Link href="https://ixd.ma/">ixd.ma</Link>.
-        </p>
-
-        <p>
-          In the past, I&apos;ve blown steam off at{' '}
-          <Link href="https://voog.com/">Voog</Link> to build the best CMS in
-          the Baltics.
-        </p>
+      <section className={styles.bigtext}>
+        If you&apos;d like to say hi, drop in on Twitter @kristjanposka.{' '}
+        <s>Or write me an e-mail.</s>
       </section>
     </>
   );

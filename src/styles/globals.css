@@ -3,21 +3,29 @@
 :root {
   --font-main: 'Inter', sans-serif;
   --font-serif: 'Georgia', serif;
+
   --color-dark: #333;
+  --color-dark-gray: #666;
+  --color-dark-gray-hover: #777;
+
+  --color-gt: #E6252A;
+  --color-vg: #443DF6;
+  --color-ixd: #FB8B24;
 }
 
 * {
   box-sizing: border-box;
-  line-height: 150%;
 }
 
 html, body {
   margin: 0;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 body {
-  width: 40%;
-  margin: 128px auto 0 auto;
+  max-width: 80%;
+  margin: 0 auto;
   font-family: var(--font-main);
   color: var(--color-dark);
 }
@@ -35,9 +43,12 @@ em {
 }
 
 a {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: #bada55;
+  color: var(--color-dark-gray);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: .8;
 }
 
 a:hover {
