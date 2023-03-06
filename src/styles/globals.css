@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
-
 :root {
-  --font-main: 'Inter', sans-serif;
-  --font-serif: 'Georgia', serif;
-
   --color-dark: #333;
   --color-dark-gray: #666;
   --color-dark-gray-hover: #777;
@@ -11,6 +6,7 @@
   --color-gt: #E6252A;
   --color-vg: #443DF6;
   --color-ixd: #FB8B24;
+  --color-artun: #00D2A0;
 }
 
 * {
@@ -19,19 +15,21 @@
 
 html, body {
   margin: 0;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 body {
-  max-width: 80%;
-  margin: 0 auto;
   font-family: var(--font-main);
   color: var(--color-dark);
 }
 
+h1 {
+  font-size: 16px;
+  margin: 0;
+}
+
 p {
   font-size: 16px;
+  line-height: 150%;
 }
 
 p:not(:last-child) {
@@ -43,14 +41,24 @@ em {
 }
 
 a {
-  color: var(--color-dark-gray);
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-position: under;
+  transition: text-decoration .1s;
 }
 
 a:hover {
-  opacity: .8;
+  text-decoration-color: transparent;
 }
 
-a:hover {
-  text-decoration: none;
+hr {
+  margin: 64px 0;
+}
+
+ul {
+  padding-inline-start: 16px;
+}
+
+li {
+  padding: 0 0 8px 8px;
 }

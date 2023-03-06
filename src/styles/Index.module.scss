@@ -1,25 +1,42 @@
-.bigtext {
-  font-family: var(--font-main);
-  font-size: 5rem;
-  font-weight: 600;
-  line-height: 120%;
-  margin-top: 128px;
+.container {
+  max-width: 768px;
+  margin: 256px auto 0 auto;
+  padding: 0 32px;
+}
+
+.head {
+  margin-bottom: 32px;
+
+  h1 {
+    margin-bottom: 8px;
+  }
+}
+
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 80%;
+  margin-left: auto;
+
+  p {
+    margin-top: 0;
+  }
 }
 
 .gt {
-  color: var(--color-gt);
+  text-decoration-color: var(--color-gt);
 }
 
 .ixd {
-  color: var(--color-ixd);
+  text-decoration-color: var(--color-ixd);
+}
+
+.artun {
+  text-decoration-color: var(--color-artun);
 }
 
 .vg {
-  color: var(--color-vg);
-}
-
-@media screen and (max-width: 768px) {
-  .bigtext {
-    font-size: 3rem;
-  }
+  text-decoration-color: var(--color-vg);
 }
