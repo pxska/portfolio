@@ -26,20 +26,6 @@ body {
   color: var(--color-dark);
 }
 
-h1 {
-  font-size: 16px;
-  margin: 0;
-}
-
-p {
-  font-size: 16px;
-  line-height: 150%;
-}
-
-p:not(:last-child) {
-  margin-bottom: 32px;
-}
-
 em {
   font-family: var(--font-serif);
 }
@@ -55,14 +41,6 @@ a:hover {
   text-decoration-color: transparent;
 }
 
-hr {
-  margin: 64px 0;
-}
-
 ul {
   padding-inline-start: 16px;
-}
-
-li {
-  padding: 0 0 8px 8px;
 }
