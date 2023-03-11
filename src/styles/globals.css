@@ -30,15 +30,9 @@ em {
   font-family: var(--font-serif);
 }
 
-a {
-  color: inherit;
+a, button {
   text-decoration: underline;
-  text-underline-position: under;
-  transition: text-decoration .1s;
-}
-
-a:hover {
-  text-decoration-color: transparent;
+  color: inherit;
 }
 
 ul {

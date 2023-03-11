@@ -14,12 +14,17 @@
   text-decoration-color: var(--color-vg);
 }
 
-.emailLink {
-  text-decoration: underline;
+.link {
   text-underline-position: under;
   transition: text-decoration .1s;
 
-  &:hover {
-    text-decoration-color: transparent;
+  @media (hover: hover) {
+    &:hover {
+      text-decoration-color: transparent;
+    }
+
+    &:active {
+      text-decoration-color: transparent;
+    }
   }
 }
