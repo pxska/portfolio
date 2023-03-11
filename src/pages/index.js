@@ -3,6 +3,12 @@ import Link from 'next/link';
 import styles from '@/styles/Index.module.scss';
 
 export default function Index() {
+  const copyToClipboard = () => {
+    const link = document.getElementById('email');
+
+    navigator.clipboard.writeText(link.innerText);
+  };
+
   return (
     <div className="max-w-3xl m-auto mt-32 px-8">
       <div className="flex">
@@ -20,13 +26,15 @@ export default function Index() {
           <div className="mb-8">
             <h1 className="font-bold">Kristjan Poska</h1>
             <em>
-              Front-end developer with a sincere love for pixel perfection
+              A front-end developer with a genuine passion for pixel-perfection.
             </em>
           </div>
 
           <p className="mb-8">
-            I love to pay attention to every single detail and make the
-            interface work smoothly for everyone.
+            I pay meticulous attention to detail in every aspect of my work,
+            ensuring that the final product is visually flawless and perfectly
+            aligned. My dedication speaks to my commitment to delivering
+            high-quality results that meet and exceed client expectations.
           </p>
 
           <p className="mb-8">
@@ -81,6 +89,30 @@ export default function Index() {
               <Link href="#">Work three</Link>
             </li>
           </ul>
+        </div>
+      </div>
+
+      <hr className="my-16" />
+
+      <div className="flex">
+        <div className="w-3/12">
+          <h1 className="font-bold">Contact</h1>
+        </div>
+
+        <div className="w-9/12">
+          <p className="mb-8">
+            <span>Contact me at </span>
+            <button
+              id="email"
+              className={styles.emailLink}
+              onClick={copyToClipboard}
+            >
+              kristjanposka@gmail.com
+            </button>
+            <span className="text-gray-500">
+              {' <– click it to copy to clipboard.'}
+            </span>
+          </p>
         </div>
       </div>
     </div>

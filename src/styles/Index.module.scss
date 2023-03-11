@@ -13,3 +13,13 @@
 .vg {
   text-decoration-color: var(--color-vg);
 }
+
+.emailLink {
+  text-decoration: underline;
+  text-underline-position: under;
+  transition: text-decoration .1s;
+
+  &:hover {
+    text-decoration-color: transparent;
+  }
+}
