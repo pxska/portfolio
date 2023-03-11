@@ -1,7 +1,7 @@
 import cc from 'classcat';
 
 import Link from 'next/link';
-import Logo from '@/components/Logo';
+import Logo from '@components/Logo';
 
 import styles from '@/styles/Index.module.scss';
 

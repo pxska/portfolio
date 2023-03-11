@@ -1,7 +1,7 @@
-import Contact from '@/components/Contact';
-import Work from '@/components/Work';
-import Intro from '@/components/Intro';
-import Separator from '@/components/Separator';
+import Contact from '@components/Contact';
+import Work from '@components/Work';
+import Intro from '@components/Intro';
+import Separator from '@components/Separator';
 
 export default function Index() {
   return (
