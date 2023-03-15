@@ -1,8 +1,14 @@
+import cc from 'classcat';
+import {useState} from 'react';
+
 import styles from '@/styles/Index.module.scss';
 
 function Contact() {
+  const [animating, setAnimating] = useState(false);
+
   const copyToClipboard = () => {
     const link = document.getElementById('email');
+    setAnimating(true);
 
     navigator.clipboard.writeText(link.innerText);
   };
@@ -16,7 +22,12 @@ function Contact() {
       <div className="w-9/12 sm:w-full">
         <p className="mb-8">
           <span>Contact me at </span>
-          <button id="email" className={styles.link} onClick={copyToClipboard}>
+          <button
+            id="email"
+            className={cc([styles.link, animating && 'animate-wiggle'])}
+            onClick={copyToClipboard}
+            onAnimationEnd={() => setAnimating(false)}
+          >
             kristjanposka@gmail.com
           </button>
           <span className="text-gray-500">
