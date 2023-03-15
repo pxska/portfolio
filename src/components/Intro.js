@@ -7,11 +7,11 @@ import styles from '@/styles/Index.module.scss';
 function Intro() {
   return (
     <div className="flex">
-      <div className="w-3/12">
+      <div className="w-3/12 sm:hidden">
         <h1 className="font-bold">Intro</h1>
       </div>
 
-      <div className="w-9/12">
+      <div className="w-9/12 sm:w-full">
         <div className="mb-8">
           <h1 className="font-bold">Kristjan Poska</h1>
           <em>
