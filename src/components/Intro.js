@@ -1,7 +1,6 @@
 import cc from 'classcat';
 
 import Link from 'next/link';
-import Logo from '@components/Logo';
 
 import styles from '@/styles/Index.module.scss';
 
@@ -9,8 +8,9 @@ function Intro() {
   return (
     <div className="flex">
       <div className="w-3/12">
-        <Logo />
+        <h1 className="font-bold">Intro</h1>
       </div>
+
       <div className="w-9/12">
         <div className="mb-8">
           <h1 className="font-bold">Kristjan Poska</h1>
