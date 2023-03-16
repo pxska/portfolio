@@ -1,7 +1,10 @@
 import cc from 'classcat';
 import {useState} from 'react';
+import Link from 'next/link';
 
 import styles from '@/styles/Index.module.scss';
+
+import Twitter from '../assets/twitter.svg';
 
 function Contact() {
   const [animating, setAnimating] = useState(false);
@@ -31,8 +34,17 @@ function Contact() {
             kristjanposka@gmail.com
           </button>
           <span className="text-gray-500">
-            {' <– click it to copy to clipboard.'}
+            {' <– click it to copy to clipboard '}
           </span>
+          <span>or just contact me on </span>
+          <Twitter className="inline mr-1" width="16" height="16" />
+          <Link
+            className={styles.link}
+            href="https://twitter.com/kristjanposka"
+          >
+            @kristjanposka
+          </Link>
+          .
         </p>
       </div>
     </div>
