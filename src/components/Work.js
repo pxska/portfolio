@@ -11,8 +11,9 @@ function Work() {
 
       <div className="w-9/12 sm:w-full">
         <p className="mb-8">
-          Check out my latest projects. I promise you&apos;ll find something for
-          your soul. If not, offer me something fulfilling to work on.
+          Behold, witness my latest endeavors! I guarantee a soul-stirring
+          experience awaits you. And should you not find satisfaction, present
+          to me a challenge worthy of my skills.
         </p>
         <ul>
           <li className="list-none pb-2">
