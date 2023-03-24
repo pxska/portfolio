@@ -3,10 +3,11 @@ import Craft from '@/components/Craft';
 import Intro from '@components/Intro';
 import Separator from '@components/Separator';
 import Stagger from '@components/Stagger';
+import Container from '@/components/Container';
 
 export default function Index() {
   return (
-    <div className="max-w-prose m-auto mt-32 mb-32 px-8">
+    <Container>
       <Intro />
 
       <Separator />
@@ -20,6 +21,6 @@ export default function Index() {
       <Stagger amount={1.5}>
         <Contact />
       </Stagger>
-    </div>
+    </Container>
   );
 }

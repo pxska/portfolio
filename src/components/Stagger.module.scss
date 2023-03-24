@@ -10,9 +10,17 @@
   }
 }
 
-.staggered {
-  animation-fill-mode: forwards;
-  animation-name: enter;
-  animation-duration: 0.6s;
-  opacity: 0;
+@media (prefers-reduced-motion: no-preference) {
+  .staggered {
+    animation-fill-mode: forwards;
+    animation-name: enter;
+    animation-duration: 0.6s;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .staggered {
+    opacity: 1;
+  }
 }

@@ -11,10 +11,11 @@ function Craft() {
           experience awaits you. And should you not find satisfaction, present
           to me a challenge worthy of my skills.
         </p>
+
         <ul>
           <li className="list-none pb-2">
-            <Link className={styles.link} href="#">
-              Work one
+            <Link className={styles.link} href="/craft/phoon">
+              Phõõn
             </Link>
           </li>
           <li className="list-none pb-2">

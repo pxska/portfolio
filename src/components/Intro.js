@@ -17,7 +17,8 @@ function Intro() {
 
           <Stagger amount={0.75}>
             <em>
-              A design engineer with a genuine passion for pixel-perfection
+              A design engineer with a love of pushing the boundaries of
+              what&apos;s possible
             </em>
           </Stagger>
         </div>
