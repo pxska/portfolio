@@ -1,6 +1,6 @@
 import cc from 'classcat';
 
-import Stagger from '@components/stagger';
+import Stagger from '@components/Stagger';
 
 import Link from 'next/link';
 
@@ -20,6 +20,7 @@ function Intro() {
           <Stagger amount={0.5}>
             <h1 className="font-bold">Kristjan Poska</h1>
           </Stagger>
+
           <Stagger amount={0.75}>
             <em>
               A design engineer with a genuine passion for pixel-perfection
