@@ -10,7 +10,9 @@ function Intro() {
   return (
     <div className="flex">
       <div className="w-3/12 sm:hidden">
-        <h1 className="font-bold">Intro</h1>
+        <Stagger amount={0.5}>
+          <h1 className="font-bold">Intro</h1>
+        </Stagger>
       </div>
 
       <div className="w-9/12 sm:w-full">
@@ -20,7 +22,7 @@ function Intro() {
           </Stagger>
           <Stagger amount={0.75}>
             <em>
-              A front-end developer with a genuine passion for pixel-perfection.
+              A design engineer with a genuine passion for pixel-perfection
             </em>
           </Stagger>
         </div>
