@@ -9,13 +9,7 @@ import styles from '@/styles/Index.module.scss';
 function Intro() {
   return (
     <div className="flex">
-      <div className="w-3/12 sm:hidden">
-        <Stagger amount={0.5}>
-          <h1 className="font-bold">Intro</h1>
-        </Stagger>
-      </div>
-
-      <div className="w-9/12 sm:w-full">
+      <div className="w-full">
         <div className="mb-8">
           <Stagger amount={0.5}>
             <h1 className="font-bold">Kristjan Poska</h1>

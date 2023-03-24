@@ -18,11 +18,7 @@ function Contact() {
 
   return (
     <div className="flex">
-      <div className="w-3/12 sm:hidden">
-        <h1 className="font-bold">Contact</h1>
-      </div>
-
-      <div className="w-9/12 sm:w-full">
+      <div className="w-full">
         <p className="mb-8">
           <span>Contact me at </span>
           <button
@@ -33,10 +29,7 @@ function Contact() {
           >
             kristjanposka@gmail.com
           </button>
-          <span className="text-gray-500">
-            {' <– click it to copy to clipboard '}
-          </span>
-          <span>or just contact me on </span>
+          <span> or just contact me on </span>
           <Twitter className="inline mr-1" width="16" height="16" />
           <Link
             className={styles.link}
