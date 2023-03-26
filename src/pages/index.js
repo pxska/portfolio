@@ -1,3 +1,5 @@
+import {useRouter} from 'next/router';
+
 import Contact from '@components/Contact';
 import Craft from '@/components/Craft';
 import Intro from '@components/Intro';
@@ -6,8 +8,12 @@ import Stagger from '@components/Stagger';
 import Container from '@/components/Container';
 
 export default function Index() {
+  const {query} = useRouter();
+
+  const shouldAnimate = query.from !== 'craft';
+
   return (
-    <Container>
+    <Container shouldAnimate={shouldAnimate}>
       <Intro />
 
       <Separator />

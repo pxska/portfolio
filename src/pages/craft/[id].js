@@ -1,7 +1,10 @@
 import {useRouter} from 'next/router';
 
-import Link from 'next/link';
 import Container from '@/components/Container';
+import Link from 'next/link';
+
+import linkStyles from '@styles/Index.module.scss';
+import Project from '@/components/Project';
 
 function CraftPage() {
   const router = useRouter();
@@ -10,8 +13,13 @@ function CraftPage() {
 
   return (
     <Container>
-      <Link href="/">{`<- Go back`}</Link>
-      <div>Craft: {id}</div>
+      <Link className={linkStyles.link} href="/?from=craft" as="/">
+        {`<- Go back`}
+      </Link>
+
+      <Project title={id}>
+        <div className="mt-8">Children</div>
+      </Project>
     </Container>
   );
 }
