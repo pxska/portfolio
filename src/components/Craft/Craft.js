@@ -1,3 +1,7 @@
+import Stagger from '@components/Stagger';
+
+import {INITIAL_STAGGER_AMOUNT, STAGGER_ADD} from '@components/Intro';
+
 import styles from './Craft.module.scss';
 
 function Craft() {
@@ -10,13 +14,25 @@ function Craft() {
       </p>
 
       <div className={styles.cards}>
-        {/* <Card
-          title="Phõõn"
-          description="Phõõn is a way to vent your spleen."
-          link="/craft/phoon"
-        />
-        <Card title="Give me back my money!" link="/craft/invl" />
-        <Card title="From" link="/craft/emotional" /> */}
+        <Stagger amount={INITIAL_STAGGER_AMOUNT + STAGGER_ADD * 4.5}>
+          <div className="flex items-center pb-8 hover:text-gray-500 cursor-pointer transition-colors">
+            <h1 className="text-7xl font-bold">1 PHÕÕN</h1>
+            <span className="text-7xl font-bold ml-auto">{`->`}</span>
+          </div>
+        </Stagger>
+
+        <Stagger amount={INITIAL_STAGGER_AMOUNT + STAGGER_ADD * 5}>
+          <div className="flex items-center py-8 hover:text-gray-500 cursor-pointer transition-colors">
+            <h1 className="text-7xl font-bold">2 INVL ⚔️ IXD</h1>
+            <span className="text-7xl font-bold ml-auto">{`->`}</span>
+          </div>
+        </Stagger>
+        <Stagger amount={INITIAL_STAGGER_AMOUNT + STAGGER_ADD * 5.5}>
+          <div className="flex items-center pt-8 hover:text-gray-500 cursor-pointer transition-colors">
+            <h1 className="text-7xl font-bold">3 SPLITWISE</h1>
+            <span className="text-7xl font-bold ml-auto">{`->`}</span>
+          </div>
+        </Stagger>
       </div>
     </div>
   );

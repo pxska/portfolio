@@ -1,0 +1,22 @@
+.link {
+  text-underline-position: under;
+  transition: text-decoration .1s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      text-decoration-color: transparent;
+    }
+
+    &:active {
+      text-decoration-color: transparent;
+    }
+  }
+}
+
+.copy {
+  transition: fill .1s;
+
+  &:hover {
+    fill: red;
+  }
+}
