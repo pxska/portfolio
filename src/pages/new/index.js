@@ -28,8 +28,8 @@ const SCROLLER_DATA = [
 
 const Index = () => {
   return (
-    <div data-animate>
-      <div className="m-8 max-w-prose">
+    <div data-animate className="h-screen">
+      <div className="p-8 max-w-prose">
         <h1 className="font-semibold text-6xl mb-8">Kristjan Poska</h1>
 
         <Stagger amount={0.25}>
@@ -39,7 +39,7 @@ const Index = () => {
           </em>
         </Stagger>
         <Stagger amount={0.5}>
-          <p className="text-2xl mt-16 leading-relaxed">
+          <p className="text-2xl my-16 leading-relaxed">
             I pay meticulous attention to detail in every aspect of my work,
             ensuring that the final product is visually flawless and perfectly
             aligned. My dedication speaks to my commitment to delivering
@@ -47,7 +47,7 @@ const Index = () => {
           </p>
         </Stagger>
         <Stagger amount={0.75}>
-          <p className="text-2xl py-16 leading-relaxed">
+          <p className="text-2xl leading-relaxed">
             Check out my projects below. If you find something that tickles your
             fancy, click on it!
           </p>

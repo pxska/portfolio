@@ -19,7 +19,7 @@ const ScrollerContainer = ({scrollerData}) => {
       className={styles.scrollerContainer}
       style={{
         height: `${containerHeight}px`,
-        top: `calc(100vh - ${LENGTH_WITH_SCROLLING}px)`,
+        // top: `calc(100vh - ${LENGTH_WITH_SCROLLING}px)`,
       }}>
       {scrollerData.map(({title, href, tags}, index) => (
         <Scroller
