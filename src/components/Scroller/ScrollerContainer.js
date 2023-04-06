@@ -4,10 +4,10 @@ import Scroller from '@components/Scroller';
 
 import styles from './Scroller.module.scss';
 
-const FONT_SIZE = 92;
+const FONT_SIZE = 96;
 const LINE_HEIGHT = 1.5;
 
-const LENGTH_WITH_SCROLLING = FONT_SIZE * LINE_HEIGHT * 3 - (3 - 1) * 48;
+const LENGTH_WITH_SCROLLING = FONT_SIZE * LINE_HEIGHT * 4 - (4 - 1) * 48;
 
 const ScrollerContainer = ({scrollerData}) => {
   const containerHeight =
@@ -21,8 +21,14 @@ const ScrollerContainer = ({scrollerData}) => {
         height: `${containerHeight}px`,
         top: `calc(100vh - ${LENGTH_WITH_SCROLLING}px)`,
       }}>
-      {scrollerData.map((title, index) => (
-        <Scroller key={index} index={index} title={title} />
+      {scrollerData.map(({title, href, tags}, index) => (
+        <Scroller
+          key={index}
+          index={index}
+          title={title}
+          href={href}
+          tags={tags}
+        />
       ))}
     </div>
   );

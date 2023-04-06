@@ -11,7 +11,7 @@
 .scroller {
   text-decoration: none;
   position: relative;
-  font-size: 92px;
+  font-size: 96px;
   white-space: nowrap;
   text-transform: uppercase;
   font-weight: 500;
@@ -22,5 +22,25 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  div {
+    transform: translateX(0);
+    transition-delay: .15s;
+    transition-property: transform;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+  }
+
+  .tag {
+    display: inline-block;
+    vertical-align: text-top;
+    font-size: 16px;
+    margin: 0 8px;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 4px 8px;
+    text-transform: initial;
+    letter-spacing: normal;
   }
 }

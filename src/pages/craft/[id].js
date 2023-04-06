@@ -14,7 +14,7 @@ function CraftPage() {
   return (
     <Container>
       <div className="max-w-prose mx-auto">
-        <Link className={linkStyles.link} href="/?from=craft" as="/">
+        <Link className={linkStyles.link} href="/new?from=craft" as="/">
           {`<- Go back`}
         </Link>
 
