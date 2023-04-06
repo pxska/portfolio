@@ -1,0 +1,26 @@
+.scrollerContainer {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 48px;
+}
+
+
+.scroller {
+  text-decoration: none;
+  position: relative;
+  font-size: 92px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  box-shadow: inset 0 1px 0 0 #333;
+  letter-spacing: 4px;
+
+  transition: transform .3s, background-color .3s;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

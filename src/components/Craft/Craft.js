@@ -2,8 +2,6 @@ import Stagger from '@components/Stagger';
 
 import {INITIAL_STAGGER_AMOUNT, STAGGER_ADD} from '@components/Intro';
 
-import styles from './Craft.module.scss';
-
 function Craft() {
   return (
     <div className="max-w-prose m-auto">
@@ -13,7 +11,7 @@ function Craft() {
         me a challenge worthy of my skills.
       </p>
 
-      <div className={styles.cards}>
+      <div>
         <Stagger amount={INITIAL_STAGGER_AMOUNT + STAGGER_ADD * 4.5}>
           <div className="flex items-center pb-8 hover:text-gray-500 cursor-pointer transition-colors">
             <h1 className="text-7xl font-bold">1 PHÕÕN</h1>
