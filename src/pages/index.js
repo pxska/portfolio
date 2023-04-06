@@ -1,7 +1,7 @@
 import {useRouter} from 'next/router';
 
 import Contact from '@components/Contact';
-import Craft from '@/components/Craft';
+import Craft from '@/components/Craft/Craft';
 import Intro from '@components/Intro';
 import Separator from '@components/Separator';
 import Stagger from '@components/Stagger';

@@ -1,5 +1,5 @@
 function Separator() {
-  return <hr className="my-16" />;
+  return <hr className="max-w-prose m-auto my-16" />;
 }
 
 export default Separator;

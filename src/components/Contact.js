@@ -17,7 +17,7 @@ function Contact() {
   };
 
   return (
-    <div className="flex">
+    <div className="max-w-prose m-auto flex">
       <div className="w-full">
         <p className="mb-8">
           <span>Contact me at </span>
@@ -25,16 +25,14 @@ function Contact() {
             id="email"
             className={cc([styles.link, animating && 'animate-wiggle'])}
             onClick={copyToClipboard}
-            onAnimationEnd={() => setAnimating(false)}
-          >
+            onAnimationEnd={() => setAnimating(false)}>
             kristjanposka@gmail.com
           </button>
           <span> or just contact me on </span>
           <Twitter className="inline mr-1" width="16" height="16" />
           <Link
             className={styles.link}
-            href="https://twitter.com/kristjanposka"
-          >
+            href="https://twitter.com/kristjanposka">
             @kristjanposka
           </Link>
           .

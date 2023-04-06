@@ -13,13 +13,15 @@ function CraftPage() {
 
   return (
     <Container>
-      <Link className={linkStyles.link} href="/?from=craft" as="/">
-        {`<- Go back`}
-      </Link>
+      <div className="max-w-prose mx-auto">
+        <Link className={linkStyles.link} href="/?from=craft" as="/">
+          {`<- Go back`}
+        </Link>
 
-      <Project title={id}>
-        <div className="mt-8">Children</div>
-      </Project>
+        <Project title={id}>
+          <div className="mt-8">Children</div>
+        </Project>
+      </div>
     </Container>
   );
 }

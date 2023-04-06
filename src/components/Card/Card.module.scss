@@ -1,0 +1,17 @@
+.readMore {
+  text-underline-position: under;
+  transition: text-decoration .1s;
+  font-weight: 500;
+  margin-top: 1rem;
+  width: fit-content;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      text-decoration-color: transparent;
+    }
+
+    &:active {
+      text-decoration-color: transparent;
+    }
+  }
+}

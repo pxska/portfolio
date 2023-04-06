@@ -8,7 +8,7 @@ import styles from '@/styles/Index.module.scss';
 
 function Intro() {
   return (
-    <div className="flex">
+    <div className="max-w-prose m-auto flex">
       <div className="w-full">
         <div className="mb-8">
           <Stagger amount={0.5}>
@@ -35,22 +35,19 @@ function Intro() {
             <span>Currently at </span>
             <Link
               className={cc([styles.link, styles.gt])}
-              href="https://www.guardtime.com/"
-            >
+              href="https://www.guardtime.com/">
               Guardtime
             </Link>
             <span> & studying </span>
             <Link
               className={cc([styles.link, styles.ixd])}
-              href="https://ixd.ma/"
-            >
+              href="https://ixd.ma/">
               Interaction Design
             </Link>
             <span> at the </span>
             <Link
               className={cc([styles.link, styles.artun])}
-              href="https://www.artun.ee/"
-            >
+              href="https://www.artun.ee/">
               Estonian Academy of Arts
             </Link>
             <span>.</span>
@@ -60,8 +57,7 @@ function Intro() {
             <span>Previously I&apos;ve worked at </span>
             <Link
               className={cc([styles.link, styles.vg])}
-              href="https://voog.com/"
-            >
+              href="https://voog.com/">
               Voog
             </Link>
             <span>
