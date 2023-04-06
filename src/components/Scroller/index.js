@@ -29,7 +29,6 @@ const Scroller = ({index, title, href, tags, staggerAmount}) => {
     setWidthFromViewport(viewportWidth - anchorElementWidth);
 
     if (anchorElementWidth > viewportWidth) {
-      console.log(anchorElementWidth, viewportWidth);
       setIncludeXStyles(true);
     }
 
