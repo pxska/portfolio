@@ -4,7 +4,7 @@ import styles from './Scroller.module.scss';
 
 const COLORS = ['#FAC243', '#049463', '#B394DB', '#EA5B13', '#FC6B63'];
 
-const Scroller = ({index, title, href, tags}) => {
+const Scroller = ({index, title, href, tags, staggerAmount}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [includeXStyles, setIncludeXStyles] = useState(false);
   const [widthFromViewport, setWidthFromViewport] = useState(0);
@@ -19,6 +19,7 @@ const Scroller = ({index, title, href, tags}) => {
     backgroundColor: isHovered
       ? COLORS[Math.floor(Math.random() * COLORS.length)]
       : 'white',
+    animationDelay: `${staggerAmount}s`,
   };
 
   const handleMouseEnter = event => {

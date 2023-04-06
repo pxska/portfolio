@@ -28,6 +28,7 @@ const ScrollerContainer = ({scrollerData}) => {
           title={title}
           href={href}
           tags={tags}
+          staggerAmount={index * 0.25}
         />
       ))}
     </div>
