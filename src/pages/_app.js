@@ -25,6 +25,7 @@ export default function App({Component, pageProps}) {
           --font-serif: ${newsreader.style.fontFamily}, serif;
         }
       `}</style>
+
       <Component {...pageProps} />
     </>
   );
