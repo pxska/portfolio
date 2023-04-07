@@ -53,6 +53,7 @@ const Index = () => {
           </p>
         </Stagger>
       </div>
+
       <ScrollerContainer scrollerData={SCROLLER_DATA} />
     </div>
   );

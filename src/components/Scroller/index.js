@@ -5,6 +5,8 @@ import styles from './Scroller.module.scss';
 const COLORS = ['#FAC243', '#049463', '#B394DB', '#EA5B13', '#FC6B63'];
 
 const Scroller = ({index, title, href, tags, staggerAmount}) => {
+  const [anchorElementWidth, setAnchorElementWidth] = useState(null);
+
   const [isMobile, setIsMobile] = useState(false);
   const [anchorDisabled, setAnchorDisabled] = useState();
   const [isHovered, setIsHovered] = useState(false);
@@ -25,13 +27,22 @@ const Scroller = ({index, title, href, tags, staggerAmount}) => {
   };
 
   const handleMouseEnter = event => {
-    const anchorElementWidth = event.currentTarget.scrollWidth;
+    const elementWidth = event.currentTarget.scrollWidth;
     const viewportWidth = window.innerWidth;
 
-    setWidthFromViewport(viewportWidth - anchorElementWidth);
+    if (!anchorElementWidth) {
+      setAnchorElementWidth(elementWidth);
+      setWidthFromViewport(viewportWidth - elementWidth);
 
-    if (anchorElementWidth > viewportWidth) {
-      setIncludeXStyles(true);
+      if (elementWidth > viewportWidth) {
+        setIncludeXStyles(true);
+      }
+    } else {
+      setWidthFromViewport(viewportWidth - anchorElementWidth);
+
+      if (anchorElementWidth > viewportWidth) {
+        setIncludeXStyles(true);
+      }
     }
 
     setIsHovered(true);
