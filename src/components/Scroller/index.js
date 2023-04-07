@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import styles from './Scroller.module.scss';
 
 const COLORS = ['#FAC243', '#049463', '#B394DB', '#EA5B13', '#FC6B63'];
 
 const Scroller = ({index, title, href, tags, staggerAmount}) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [anchorDisabled, setAnchorDisabled] = useState();
   const [isHovered, setIsHovered] = useState(false);
   const [includeXStyles, setIncludeXStyles] = useState(false);
   const [widthFromViewport, setWidthFromViewport] = useState(0);
@@ -23,7 +25,7 @@ const Scroller = ({index, title, href, tags, staggerAmount}) => {
   };
 
   const handleMouseEnter = event => {
-    const anchorElementWidth = event.target.scrollWidth;
+    const anchorElementWidth = event.currentTarget.scrollWidth;
     const viewportWidth = window.innerWidth;
 
     setWidthFromViewport(viewportWidth - anchorElementWidth);
@@ -41,8 +43,31 @@ const Scroller = ({index, title, href, tags, staggerAmount}) => {
     setIsHovered(false);
   };
 
+  const handleLinkClick = event => {
+    if (isMobile && anchorDisabled) {
+      event.preventDefault();
+      setAnchorDisabled(false);
+    }
+  };
+
+  const handleWindowSizeChange = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+    setAnchorDisabled(window.innerWidth <= 768);
+
+    window?.addEventListener('resize', handleWindowSizeChange);
+
+    return () => {
+      window?.removeEventListener('resize', handleWindowSizeChange);
+    };
+  }, []);
+
   return (
     <a
+      onClick={handleLinkClick}
       href={href}
       className={styles.scroller}
       onMouseEnter={handleMouseEnter}
