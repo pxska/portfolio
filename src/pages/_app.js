@@ -4,12 +4,10 @@ import '@/styles/globals.css';
 
 import Head from 'next/head';
 
-import {AnimatePresence} from 'framer-motion';
-
 const inter = Inter({subsets: ['latin']});
 const newsreader = Newsreader({subsets: ['latin']});
 
-export default function App({Component, pageProps, router}) {
+export default function App({Component, pageProps}) {
   return (
     <>
       <Head>
@@ -27,9 +25,8 @@ export default function App({Component, pageProps, router}) {
           --font-serif: ${newsreader.style.fontFamily}, serif;
         }
       `}</style>
-      <AnimatePresence mode="wait" initial={false}>
-        <Component {...pageProps} key={router.asPath} />
-      </AnimatePresence>
+
+      <Component {...pageProps} />
     </>
   );
 }
