@@ -28,7 +28,7 @@ const SCROLLER_DATA = [
 
 const Index = () => {
   return (
-    <div data-animate className="h-screen">
+    <div data-animate className="min-h-screen flex flex-col justify-between">
       <div className="pt-8 px-8 max-w-prose">
         <h1 className="font-semibold text-6xl mb-8">Kristjan Poska</h1>
 
