@@ -62,6 +62,7 @@ const Scroller = ({index, title, href, tags, staggerAmount}) => {
   };
 
   const handleWindowSizeChange = () => {
+    setAnchorElementWidth(null);
     setIsMobile(window.innerWidth <= 768);
   };
 
