@@ -3,7 +3,6 @@ import {useRouter} from 'next/router';
 import Container from '@/components/Container';
 import Link from 'next/link';
 
-import linkStyles from '@styles/Index.module.scss';
 import Project from '@/components/Project';
 
 function CraftPage() {
@@ -14,7 +13,7 @@ function CraftPage() {
   return (
     <Container>
       <div className="max-w-prose mx-auto">
-        <Link className={linkStyles.link} href="/new?from=craft" as="/">
+        <Link href="/new?from=craft" as="/">
           {`<- Go back`}
         </Link>
 
