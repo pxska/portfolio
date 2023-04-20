@@ -7,8 +7,6 @@ import styles from './Scroller.module.scss';
 const FONT_SIZE = 96;
 const LINE_HEIGHT = 1.5;
 
-const LENGTH_WITH_SCROLLING = FONT_SIZE * LINE_HEIGHT * 4 - (4 - 1) * 48;
-
 const ScrollerContainer = ({scrollerData}) => {
   const containerHeight =
     FONT_SIZE * LINE_HEIGHT * scrollerData.length -
@@ -20,11 +18,12 @@ const ScrollerContainer = ({scrollerData}) => {
       style={{
         height: `${containerHeight}px`,
       }}>
-      {scrollerData.map(({title, href, tags}, index) => (
+      {scrollerData.map(({title, href, as, tags}, index) => (
         <Scroller
           key={index}
           index={index}
           title={title}
+          as={as}
           href={href}
           tags={tags}
           staggerAmount={index * 0.25}

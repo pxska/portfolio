@@ -1,12 +1,10 @@
 import styles from './Container.module.scss';
 
-function Container({children, shouldAnimate}) {
+function Container({children}) {
   return (
-    <div
-      className="mt-32 mb-32 px-8 overflow-hidden"
-      data-animate={shouldAnimate}>
-      <div className={styles.blurred}></div>
-      {children}
+    <div className="min-h-screen">
+      <div className={styles.blurred} />
+      <div className="mt-32 pt-8 px-8">{children}</div>
     </div>
   );
 }

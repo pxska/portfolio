@@ -2,7 +2,16 @@ import React, {useState, useEffect} from 'react';
 
 import styles from './Scroller.module.scss';
 
-const COLORS = ['#FAC243', '#049463', '#B394DB', '#EA5B13', '#FC6B63'];
+import Link from 'next/link';
+
+const COLORS = [
+  '#FAC243',
+  '#049463',
+  '#B394DB',
+  '#EA5B13',
+  '#FC6B63',
+  '#C2847A',
+];
 
 const Scroller = ({index, title, href, tags, staggerAmount}) => {
   const [anchorElementWidth, setAnchorElementWidth] = useState(null);
@@ -16,13 +25,13 @@ const Scroller = ({index, title, href, tags, staggerAmount}) => {
   const initialTransform = `${-index * 48}px`;
   const hoverTransform = `${-index * 48 - 48}px`;
 
+  let currentRandomColor = COLORS[Math.floor(Math.random() * COLORS.length)];
+
   const scrollerStyles = {
     transform: isHovered
       ? `translateY(${hoverTransform})`
       : `translateY(${initialTransform})`,
-    backgroundColor: isHovered
-      ? COLORS[Math.floor(Math.random() * COLORS.length)]
-      : 'white',
+    backgroundColor: isHovered ? currentRandomColor : 'white',
     animationDelay: `${staggerAmount}s`,
   };
 
@@ -78,13 +87,16 @@ const Scroller = ({index, title, href, tags, staggerAmount}) => {
   }, []);
 
   return (
-    <a
+    <Link
       onClick={handleLinkClick}
-      href={href}
+      href={`${href}?title=${encodeURIComponent(
+        title
+      )}&color=${encodeURIComponent(currentRandomColor)}`}
       className={styles.scroller}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={scrollerStyles}>
+      style={scrollerStyles}
+      passHref>
       <div
         style={{
           ...(includeXStyles && {
@@ -98,7 +110,7 @@ const Scroller = ({index, title, href, tags, staggerAmount}) => {
           </div>
         ))}
       </div>
-    </a>
+    </Link>
   );
 };
 
