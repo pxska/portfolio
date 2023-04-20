@@ -8,10 +8,12 @@ import thirdImage from '../../assets/images/IMG_2693.jpg';
 const Tangible = () => {
   return (
     <div className="flex gap-8 overflow-x-auto">
-      <p className="text-xl max-w-[250px]">
-        Introducing Playser – a musical device that is going to change the way
-        people explore their creativity through music.
-      </p>
+      <div className="max-w-[250px]">
+        <p className="text-xl">
+          Introducing Playser – a musical device that is going to change the way
+          people explore their creativity through music.
+        </p>
+      </div>
       <div className="flex gap-4">
         <Image
           src={firstImage}
