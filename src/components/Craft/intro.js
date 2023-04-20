@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Intro = () => {
-  return <>Fun text here!</>;
+  return <div></div>;
 };
 
 export default Intro;
