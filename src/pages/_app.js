@@ -12,7 +12,20 @@ export default function App({Component, pageProps}) {
     <>
       <Head>
         <title>Kristjan Poska</title>
-        <link rel="shortcut icon" href="favicon.ico" />
+
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%23000000%22></rect></svg>"
+          media="(prefers-color-scheme: light)"
+        />
+
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%23ffffff%22></rect></svg>"
+          media="(prefers-color-scheme: dark)"
+        />
 
         <meta
           name="description"
