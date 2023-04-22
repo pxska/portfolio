@@ -7,7 +7,7 @@ import imageSrc from '../../assets/images/IMG_7073.jpg';
 const Intro = () => {
   return (
     <div>
-      <Image src={imageSrc} />
+      <Image src={imageSrc} alt="phone on tree" />
     </div>
   );
 };

@@ -1,10 +1,7 @@
-import styles from './Container.module.scss';
-
-function Container({className, children}) {
+function Container({className, children, style}) {
   return (
-    <div className={className}>
-      <div className={styles.blurred} />
-      <div className="mt-32 pt-8 px-8">{children}</div>
+    <div className={className} style={style}>
+      <div className="pt-8 px-8">{children}</div>
     </div>
   );
 }

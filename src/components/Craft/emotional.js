@@ -6,7 +6,7 @@ import imageSrc from '../../assets/images/mockup.jpeg';
 const Emotional = () => {
   return (
     <div>
-      <Image src={imageSrc} />
+      <Image src={imageSrc} alt="emodesign" />
     </div>
   );
 };

@@ -1,9 +1,12 @@
-import React from 'react';
+import cc from 'classcat';
+import React, {useState} from 'react';
 
 import ScrollerContainer from '@/components/Scroller/ScrollerContainer';
 import Stagger from '@/components/Stagger';
 
 import {GiPush, GiMonkeyWrench} from 'react-icons/gi';
+
+import styles from '@styles/Index.module.scss';
 
 const SCROLLER_DATA = [
   {
@@ -29,8 +32,19 @@ const SCROLLER_DATA = [
 ];
 
 const Index = () => {
+  const [backgroundColor, setBackgroundColor] = useState('transparent');
+
   return (
     <div data-animate className="min-h-screen flex flex-col justify-between">
+      <div
+        className={cc([backgroundColor !== 'transparent' && styles.colorPop])}
+        style={{
+          backgroundColor,
+          width: '100vw',
+          height: '100vh',
+          position: 'absolute',
+        }}
+      />
       <div className="pt-8 px-8">
         <h1 className="text-8xl mb-8 uppercase font-semibold md:text-4xl">
           Kristjan Poska
@@ -67,7 +81,10 @@ const Index = () => {
         </Stagger>
       </div>
 
-      <ScrollerContainer scrollerData={SCROLLER_DATA} />
+      <ScrollerContainer
+        scrollerData={SCROLLER_DATA}
+        onBackgroundChange={setBackgroundColor}
+      />
     </div>
   );
 };

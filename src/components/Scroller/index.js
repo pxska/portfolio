@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import styles from './Scroller.module.scss';
 
 import Link from 'next/link';
+import {useRouter} from 'next/router';
 
 const COLORS = [
   '#FAC243',
@@ -13,8 +14,10 @@ const COLORS = [
   '#C2847A',
 ];
 
-const Scroller = ({index, title, href, tags, staggerAmount}) => {
+const Scroller = ({index, title, href, tags, staggerAmount, onClick}) => {
   const [anchorElementWidth, setAnchorElementWidth] = useState(null);
+
+  const router = useRouter();
 
   const [isMobile, setIsMobile] = useState(false);
   const [anchorDisabled, setAnchorDisabled] = useState();
@@ -64,10 +67,20 @@ const Scroller = ({index, title, href, tags, staggerAmount}) => {
   };
 
   const handleLinkClick = event => {
+    onClick(currentRandomColor);
+
     if (isMobile && anchorDisabled) {
       event.preventDefault();
       setAnchorDisabled(false);
     }
+
+    event.preventDefault();
+
+    const targetLink = event.target.parentElement.parentElement.href;
+
+    setTimeout(() => {
+      router.push(targetLink);
+    }, 500);
   };
 
   const handleWindowSizeChange = () => {

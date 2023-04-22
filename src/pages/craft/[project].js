@@ -12,13 +12,9 @@ const Project = () => {
     query: {title, color, project},
   } = useRouter();
 
-  console.log(project);
-
   return (
-    <Container>
-      <h1
-        className="text-8xl mb-8 uppercase font-semibold md:text-4xl"
-        style={{color}}>
+    <Container style={{backgroundColor: color, height: '100%'}}>
+      <h1 className="text-8xl mb-8 uppercase font-semibold md:text-4xl">
         {title}
       </h1>
       <Link href="/">Go back home</Link>
