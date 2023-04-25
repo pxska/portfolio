@@ -55,6 +55,7 @@ const Index = () => {
           title="Phõõn ~ a safe space."
           description="You might not always want to burden your loved ones with your problems. Go for a walk in the nature and talk to Phõõn."
           backgroundColor={shuffledColors[0]}
+          href="/craft/phoon"
         />
         <Card
           icon={
@@ -76,6 +77,7 @@ const Index = () => {
           title="Give me back my money!"
           description="Alright, hear me out – a life insurance company, but they give you back all the money you've paid. Sounds crazy? Yes."
           backgroundColor={shuffledColors[1]}
+          href="/craft/invl"
         />
         <Card
           icon={
@@ -97,6 +99,7 @@ const Index = () => {
           title="Ugh, I hate tracking my expenses."
           description="How might we make sharing expenses a more emotional experience for people on the Splitwise application?"
           backgroundColor={shuffledColors[2]}
+          href="/craft/splitwise"
         />
         <Card
           icon={
@@ -118,6 +121,7 @@ const Index = () => {
           title="A laser gun for making music."
           description="An instrument you would play in your 16 square metre apartment in the year 2123. And it's anything you could have ever dreamed of."
           backgroundColor={shuffledColors[3]}
+          href="/craft/playser"
         />
       </section>
 

@@ -8,7 +8,32 @@
   margin-bottom: 128px;
 }
 
+.backLink {
+  font-size: 16px;
+  position: absolute;
+  left: -128px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 64px;
+  text-decoration: none;
+  font-weight: normal;
+  color: #858480;
+  transition: color .075s;
+
+  @media screen and (max-width: 1024px) {
+    position: relative;
+    left: 0;
+  }
+
+  &:hover {
+    color: #333;
+  }
+}
+
 .title {
+  position: relative;
   margin-top: 128px;
   font-size: 64px;
   line-height: 64px;

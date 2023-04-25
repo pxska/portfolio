@@ -1,5 +1,5 @@
 .card {
-  background-color: #DCB481;
+  text-decoration: none;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
     height: 100%;
   }
 
-  &:hover {
+  &:hover, &:focus {
     cursor: pointer;
     transform: scale(102%);
     box-shadow: 0 0 16px rgba(51, 51, 51, .2);
