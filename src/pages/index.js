@@ -10,7 +10,6 @@ function shuffle(array) {
     randomIndex;
 
   while (currentIndex != 0) {
-    // Pick a remaining element.
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
 
