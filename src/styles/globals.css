@@ -22,6 +22,7 @@ html, body {
 }
 
 body {
+  background-color: #F2F1EF;
   font-family: var(--font-main);
   color: var(--color-dark);
   -webkit-font-smoothing: antialiased;
@@ -41,15 +42,4 @@ a, button {
 
 ul {
   padding-inline-start: 0;
-}
-
-/* For Webkit-based browsers (Chrome, Safari and Opera) */
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-
-/* For IE, Edge and Firefox */
-.scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
 }

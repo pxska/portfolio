@@ -1,17 +1,15 @@
-import Link from 'next/link';
-import React from 'react';
-
 import styles from './Card.module.scss';
 
-function Card({title, description, link}) {
+const Card = ({icon, title, description, backgroundColor}) => {
   return (
-    <div className="h-32 flex flex-col justify-center">
-      <div className="uppercase font-bold">{title}</div>
-      <p>{description}</p>
-
-      <Link className={styles.readMore} href={link}>{`Read more ->`}</Link>
+    <div className={styles.card} style={{backgroundColor}}>
+      <div className={styles.icon}>{icon}</div>
+      <div className={styles.description}>
+        <span className={styles.title}>{title}&nbsp;</span>
+        {description}
+      </div>
     </div>
   );
-}
+};
 
 export default Card;

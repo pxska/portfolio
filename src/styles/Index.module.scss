@@ -1,73 +1,61 @@
-.boundaries {
-  border: 1px solid #333;
-  margin: 0 4px;
-  width: fit-content;
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  width: 784px;
+  margin: 0 auto;
+  margin-bottom: 128px;
 }
 
-@-webkit-keyframes fadeInFromNone {
-  0% {
-      display: none;
-      opacity: 0;
-  }
+.title {
+  margin-top: 128px;
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: bold;
 
-  1% {
-      display: block;
-      opacity: 0;
-  }
-
-  100% {
-      display: block;
-      opacity: 1;
+  .description {
+    color: #858480;
   }
 }
 
-@-moz-keyframes fadeInFromNone {
-  0% {
-      display: none;
-      opacity: 0;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 16px;
+  grid-auto-flow: dense;
+
+  &:before {
+    content: '';
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
   }
 
-  1% {
-      display: block;
-      opacity: 0;
+  :nth-child(2) {
+    grid-row: span 2;
   }
 
-  100% {
-      display: block;
-      opacity: 1;
-  }
-}
-
-@-o-keyframes fadeInFromNone {
-  0% {
-      opacity: 0;
+  :nth-child(3) {
+    grid-row: span 2;
   }
 
-  1% {
-      opacity: 0;
-  }
-
-  100% {
-      opacity: 1;
-  }
-}
-
-@keyframes fadeInFromNone {
-  0% {
-      opacity: 0;
-  }
-
-  1% {
-      opacity: 0;
-  }
-
-  100% {
-      opacity: 1;
+  :first-child {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
   }
 }
 
-.colorPop {
-  z-index: 1;
+section.contact {
+  color: #858480;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 
-  animation: fadeInFromNone 0.5s ease-out;
+  .bold {
+    color: #333;
+    font-weight: bold;
+  }
 }

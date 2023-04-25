@@ -1,17 +1,34 @@
-.readMore {
-  text-underline-position: under;
-  transition: text-decoration .1s;
-  font-weight: 500;
-  margin-top: 1rem;
-  width: fit-content;
+.card {
+  background-color: #DCB481;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  justify-content: space-between;
+  gap: 16px;
+  transition: transform 0.075s ease-in-out;
 
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      text-decoration-color: transparent;
-    }
+  .title {
+    font-weight: bold;
+  }
 
-    &:active {
-      text-decoration-color: transparent;
-    }
+  .iconWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(102%);
+    box-shadow: 0 0 16px rgba(51, 51, 51, .2);
   }
 }
