@@ -1,4 +1,5 @@
 import {Inter, Newsreader} from '@next/font/google';
+import {Analytics} from '@vercel/analytics/react';
 
 import '@/styles/globals.css';
 
@@ -40,6 +41,7 @@ export default function App({Component, pageProps}) {
       `}</style>
 
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
