@@ -3,8 +3,6 @@ import Card from '@components/Card';
 import styles from '@styles/Index.module.scss';
 import Link from 'next/link';
 
-const COLORS = ['#DCB481', '#C09E85', '#E0D0C3', '#90837A', '#B9B99D'];
-
 function shuffle(array) {
   let currentIndex = array.length,
     randomIndex;
@@ -23,7 +21,13 @@ function shuffle(array) {
 }
 
 const Index = () => {
-  const shuffledColors = shuffle(COLORS);
+  const shuffledColors = shuffle([
+    '#DCB481',
+    '#C09E85',
+    '#E0D0C3',
+    '#90837A',
+    '#B9B99D',
+  ]);
 
   return (
     <div className={styles.container}>
