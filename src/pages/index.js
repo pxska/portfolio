@@ -8,8 +8,6 @@ import Bills from '@assets/icons/bills.svg';
 import Stocks from '@assets/icons/stocks.svg';
 import Note from '@assets/icons/note.svg';
 
-const COLORS = ['#DCB481', '#C09E85', '#E0D0C3', '#90837A', '#B9B99D'];
-
 const Index = () => {
   return (
     <div className={styles.container}>
@@ -25,28 +23,24 @@ const Index = () => {
           icon={<Phone />}
           title="Phõõn ~ a safe space."
           description="You might not always want to burden your loved ones with your problems. Go for a walk in the nature and talk to Phõõn."
-          backgroundColor={COLORS[Math.floor(Math.random() * COLORS.length)]}
           href="/craft/phoon"
         />
         <Card
           icon={<Bills />}
           title="Give me back my money!"
           description="Alright, hear me out – a life insurance company, but they give you back all the money you've paid. Sounds crazy? Yes."
-          backgroundColor={COLORS[Math.floor(Math.random() * COLORS.length)]}
           href="/craft/invl"
         />
         <Card
           icon={<Stocks />}
           title="Ugh, I hate tracking my expenses."
           description="How might we make sharing expenses a more emotional experience for people on the Splitwise application?"
-          backgroundColor={COLORS[Math.floor(Math.random() * COLORS.length)]}
           href="/craft/splitwise"
         />
         <Card
           icon={<Note />}
           title="A laser gun for making music."
           description="An instrument you would play in your 16 square metre apartment in the year 2123. And it's anything you could have ever dreamed of."
-          backgroundColor={COLORS[Math.floor(Math.random() * COLORS.length)]}
           href="/craft/playser"
         />
       </section>
