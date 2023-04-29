@@ -1,11 +1,17 @@
+import {useEffect, useState} from 'react';
+
 import styles from './Card.module.scss';
 
 const COLORS = ['#DCB481', '#C09E85', '#E0D0C3', '#90837A', '#B9B99D'];
 
 const Card = ({href, icon, title, description}) => {
-  const backgroundColorStyles = {
-    backgroundColor: COLORS[Math.floor(Math.random() * COLORS.length)],
-  };
+  const [backgroundColorStyles, setBackgroundColorStyles] = useState({});
+
+  useEffect(() => {
+    setBackgroundColorStyles({
+      backgroundColor: COLORS[Math.floor(Math.random() * COLORS.length)],
+    });
+  }, []);
 
   return (
     <a href={href} className={styles.card} style={backgroundColorStyles}>
