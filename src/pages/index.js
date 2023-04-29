@@ -20,24 +20,28 @@ const Index = () => {
 
       <section className={styles.cards}>
         <Card
+          index={0}
           icon={<Phone />}
           title="Phõõn ~ a safe space."
           description="You might not always want to burden your loved ones with your problems. Go for a walk in the nature and talk to Phõõn."
           href="/craft/phoon"
         />
         <Card
+          index={1}
           icon={<Bills />}
           title="Give me back my money!"
           description="Alright, hear me out – a life insurance company, but they give you back all the money you've paid. Sounds crazy? Yes."
           href="/craft/invl"
         />
         <Card
+          index={2}
           icon={<Stocks />}
           title="Ugh, I hate tracking my expenses."
           description="How might we make sharing expenses a more emotional experience for people on the Splitwise application?"
           href="/craft/splitwise"
         />
         <Card
+          index={3}
           icon={<Note />}
           title="A laser gun for making music."
           description="An instrument you would play in your 16 square metre apartment in the year 2123. And it's anything you could have ever dreamed of."
