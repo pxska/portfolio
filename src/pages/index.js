@@ -1,14 +1,41 @@
+import {useEffect, useState} from 'react';
+
 import Card from '@components/Card';
+import Link from 'next/link';
 
 import styles from '@styles/Index.module.scss';
-import Link from 'next/link';
 
 import Phone from '@assets/icons/phone.svg';
 import Bills from '@assets/icons/bills.svg';
 import Stocks from '@assets/icons/stocks.svg';
 import Note from '@assets/icons/note.svg';
 
+const COLORS = ['#DCB481', '#C09E85', '#E0D0C3', '#90837A', '#B9B99D'];
+
+function shuffle(array) {
+  let currentIndex = array.length,
+    randomIndex;
+
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+
+  return array;
+}
+
 const Index = () => {
+  const [shuffledArray, setShuffledArray] = useState([]);
+
+  useEffect(() => {
+    setShuffledArray(shuffle(COLORS));
+  }, []);
+
   return (
     <div className={styles.container}>
       <section className={styles.title}>
@@ -20,28 +47,28 @@ const Index = () => {
 
       <section className={styles.cards}>
         <Card
-          index={0}
+          backgroundColor={shuffledArray[0]}
           icon={<Phone />}
           title="Phõõn ~ a safe space."
           description="You might not always want to burden your loved ones with your problems. Go for a walk in the nature and talk to Phõõn."
           href="/craft/phoon"
         />
         <Card
-          index={1}
+          backgroundColor={shuffledArray[1]}
           icon={<Bills />}
           title="Give me back my money!"
           description="Alright, hear me out – a life insurance company, but they give you back all the money you've paid. Sounds crazy? Yes."
           href="/craft/invl"
         />
         <Card
-          index={2}
+          backgroundColor={shuffledArray[2]}
           icon={<Stocks />}
           title="Ugh, I hate tracking my expenses."
           description="How might we make sharing expenses a more emotional experience for people on the Splitwise application?"
           href="/craft/splitwise"
         />
         <Card
-          index={3}
+          backgroundColor={shuffledArray[3]}
           icon={<Note />}
           title="A laser gun for making music."
           description="An instrument you would play in your 16 square metre apartment in the year 2123. And it's anything you could have ever dreamed of."
