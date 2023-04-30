@@ -1,0 +1,73 @@
+import fs from 'fs';
+import matter from 'gray-matter';
+import md from 'markdown-it';
+
+import BackLink from '@/components/BackLink';
+
+import styles from '@styles/Index.module.scss';
+
+export async function getStaticPaths() {
+  try {
+    const files = fs.readdirSync('public/posts');
+
+    const paths = files.map(fileName => ({
+      params: {
+        slug: fileName.replace('.md', ''),
+      },
+    }));
+
+    return {
+      paths,
+      fallback: 'blocking',
+    };
+  } catch (error) {
+    console.error(error);
+
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
+}
+
+export async function getStaticProps({params: {slug}}) {
+  try {
+    const fileName = fs.readFileSync(`public/posts/${slug}.md`, 'utf-8');
+    const {data: frontmatter, content} = matter(fileName);
+
+    return {
+      props: {
+        frontmatter,
+        content,
+      },
+    };
+  } catch (error) {
+    console.error(error);
+
+    return {
+      props: {},
+    };
+  }
+}
+
+const Project = ({frontmatter, content}) => {
+  return (
+    <div className={styles.container}>
+      <section className={styles.title}>
+        <BackLink />
+        <h1>{frontmatter.shortName}&nbsp;</h1>
+        <span className={styles.description}>
+          {frontmatter.shortDescription}
+        </span>
+      </section>
+
+      <p className={styles.hook}>{frontmatter.description}</p>
+
+      <section className={styles.projectDescription}>
+        <div dangerouslySetInnerHTML={{__html: md().render(content)}} />
+      </section>
+    </div>
+  );
+};
+
+export default Project;

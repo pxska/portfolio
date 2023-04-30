@@ -1,4 +1,6 @@
 import {useEffect, useState} from 'react';
+import fs from 'fs';
+import matter from 'gray-matter';
 
 import Card from '@components/Card';
 import Link from 'next/link';
@@ -9,6 +11,34 @@ import Phone from '@assets/icons/phone.svg';
 import Bills from '@assets/icons/bills.svg';
 import Stocks from '@assets/icons/stocks.svg';
 import Note from '@assets/icons/note.svg';
+
+export async function getStaticProps() {
+  try {
+    const files = fs.readdirSync('public/posts');
+
+    const posts = files.map(fileName => {
+      const slug = fileName.replace('.md', '');
+      const readFile = fs.readFileSync(`public/posts/${fileName}`, 'utf-8');
+
+      const {data: frontmatter} = matter(readFile);
+
+      return {
+        slug,
+        frontmatter,
+      };
+    });
+
+    return {
+      props: {posts},
+    };
+  } catch (error) {
+    console.error(error);
+
+    return {
+      props: {},
+    };
+  }
+}
 
 const COLORS = ['#DCB481', '#C09E85', '#E0D0C3', '#90837A', '#B9B99D'];
 
@@ -29,12 +59,27 @@ function shuffle(array) {
   return array;
 }
 
-const Index = () => {
+function getIcon(fmIcon) {
+  switch (fmIcon) {
+    case 'phone':
+      return <Phone />;
+    case 'bills':
+      return <Bills />;
+    case 'stocks':
+      return <Stocks />;
+    case 'note':
+      return <Note />;
+  }
+}
+
+const Index = ({posts}) => {
   const [shuffledArray, setShuffledArray] = useState([]);
 
   useEffect(() => {
     setShuffledArray(shuffle(COLORS));
   }, []);
+
+  console.log(posts);
 
   return (
     <div className={styles.container}>
@@ -46,34 +91,16 @@ const Index = () => {
       </section>
 
       <section className={styles.cards}>
-        <Card
-          backgroundColor={shuffledArray[0]}
-          icon={<Phone />}
-          title="Phõõn ~ a safe space."
-          description="You might not always want to burden your loved ones with your problems. Go for a walk in the nature and talk to Phõõn."
-          href="/craft/phoon"
-        />
-        <Card
-          backgroundColor={shuffledArray[1]}
-          icon={<Bills />}
-          title="Give me back my money!"
-          description="Alright, hear me out – a life insurance company, but they give you back all the money you've paid. Sounds crazy? Yes."
-          href="/craft/invl"
-        />
-        <Card
-          backgroundColor={shuffledArray[2]}
-          icon={<Stocks />}
-          title="Ugh, I hate tracking my expenses."
-          description="How might we make sharing expenses a more emotional experience for people on the Splitwise application?"
-          href="/craft/splitwise"
-        />
-        <Card
-          backgroundColor={shuffledArray[3]}
-          icon={<Note />}
-          title="A laser gun for making music."
-          description="An instrument you would play in your 16 square metre apartment in the year 2123. And it's anything you could have ever dreamed of."
-          href="/craft/playser"
-        />
+        {posts.map(({slug, frontmatter}, index) => (
+          <Card
+            key={slug}
+            backgroundColor={shuffledArray[index]}
+            icon={getIcon(frontmatter.icon)}
+            title={frontmatter.title}
+            description={frontmatter.description}
+            href={`/craft/${slug}`}
+          />
+        ))}
       </section>
 
       <section className={styles.contact}>

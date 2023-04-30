@@ -39,6 +39,10 @@
   line-height: 64px;
   font-weight: bold;
 
+  h1 {
+    display: inline;
+  }
+
   .description {
     color: #858480;
   }
@@ -83,5 +87,48 @@ section.contact {
   .bold {
     color: #333;
     font-weight: bold;
+  }
+}
+
+.hook {
+  color: #858480;
+}
+
+.projectDescription {
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  img {
+    margin: 8px 0;
+  }
+
+  .postIts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    li {
+      color: #333;
+      background-color: #ffc;
+      display: block;
+      height: 160px;
+      width: 160px;
+      padding: 16px;
+      box-shadow: 4px 4px 8px #858480;
+    }
   }
 }
