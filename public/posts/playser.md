@@ -7,10 +7,3 @@ icon: "note"
 ---
 
 Coming soon, I promise.
-
-<!--
-## Discover
-## Explore & Define
-## Develop & Test
-## Deliver & Listen
--->

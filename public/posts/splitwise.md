@@ -7,10 +7,3 @@ icon: "stocks"
 ---
 
 Coming soon, I promise.
-
-<!--
-## Discover
-## Explore & Define
-## Develop & Test
-## Deliver & Listen
--->
