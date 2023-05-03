@@ -6,7 +6,11 @@ shortDescription: 'Your personal musical companion.'
 icon: "note"
 ---
 
+Coming soon, I promise.
+
+<!--
 ## Discover
 ## Explore & Define
 ## Develop & Test
 ## Deliver & Listen
+-->

@@ -6,7 +6,11 @@ shortDescription: 'The company with the wildest ideas.'
 icon: "bills"
 ---
 
+Coming soon, I promise.
+
+<!--
 ## Discover
 ## Explore & Define
 ## Develop & Test
 ## Deliver & Listen
+-->
