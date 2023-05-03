@@ -4,6 +4,10 @@ description: "An instrument you would play in your 16 square metre apartment in 
 shortName: 'Playser.'
 shortDescription: 'Your personal musical companion.'
 icon: "note"
+tags:
+  - design
+  - tangible
+  - fun
 ---
 
 Coming soon, I promise.

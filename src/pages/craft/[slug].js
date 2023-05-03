@@ -61,6 +61,14 @@ const Project = ({frontmatter, content}) => {
         </span>
       </section>
 
+      <div className={styles.tags}>
+        {frontmatter.tags.map(tag => (
+          <span key={tag} className={styles.tag}>
+            {tag}
+          </span>
+        ))}
+      </div>
+
       <p className={styles.hook}>{frontmatter.description}</p>
 
       <section className={styles.projectDescription}>

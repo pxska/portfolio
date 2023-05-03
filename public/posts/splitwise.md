@@ -4,6 +4,9 @@ description: "How might we make sharing expenses a more emotional experience for
 shortName: 'Splitwise.'
 shortDescription: 'An emotional expense tracking app.'
 icon: "stocks"
+tags:
+  - design
+  - emotional
 ---
 
 Coming soon, I promise.

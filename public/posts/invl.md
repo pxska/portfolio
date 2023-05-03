@@ -4,6 +4,9 @@ description: "Alright, hear me out – a life insurance company, but they give y
 shortName: 'INVL.'
 shortDescription: 'The company with the wildest ideas.'
 icon: "bills"
+tags:
+  - design
+  - service
 ---
 
 Coming soon, I promise.

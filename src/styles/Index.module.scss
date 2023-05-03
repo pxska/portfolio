@@ -1,3 +1,5 @@
+$colors: #DCB481, #C09E85, #E0D0C3, #90837A, #B9B99D;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -29,6 +31,27 @@
 
   &:hover {
     color: #333;
+  }
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-top: -32px;
+  margin-bottom: -48px;
+
+  .tag {
+    font-size: 12px;
+    line-height: 24px;
+    white-space: nowrap;
+    padding: 0 8px;
+    border-radius: 16px;
+
+    @for $i from 1 through length($colors) {
+      &:nth-child(#{length($colors)}n+#{$i}) {
+        background-color: nth($colors, $i);
+      }
+    }
   }
 }
 
