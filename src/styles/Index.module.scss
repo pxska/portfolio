@@ -74,7 +74,7 @@ $colors: #DCB481, #C09E85, #E0D0C3, #90837A, #B9B99D;
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 1fr;
+  grid-auto-rows: 300px;
   gap: 16px;
   grid-auto-flow: dense;
 
