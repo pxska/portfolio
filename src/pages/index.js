@@ -12,6 +12,8 @@ import Bills from '@assets/icons/bills.svg';
 import Stocks from '@assets/icons/stocks.svg';
 import Note from '@assets/icons/note.svg';
 
+import {BiCopy, BiCheck} from 'react-icons/bi';
+
 export async function getStaticProps() {
   try {
     const files = fs.readdirSync('public/posts');
@@ -73,13 +75,22 @@ function getIcon(fmIcon) {
 }
 
 const Index = ({posts}) => {
+  const [copyIcon, setCopyIcon] = useState(<BiCopy />);
   const [shuffledArray, setShuffledArray] = useState([]);
 
   useEffect(() => {
     setShuffledArray(shuffle(COLORS));
   }, []);
 
-  console.log(posts);
+  const copyContent = async () => {
+    await navigator.clipboard.writeText('kristjanposka@gmail.com').then(() => {
+      setCopyIcon(<BiCheck />);
+
+      setTimeout(() => {
+        setCopyIcon(<BiCopy />);
+      }, 1000);
+    });
+  };
 
   return (
     <div className={styles.container}>
@@ -106,7 +117,10 @@ const Index = ({posts}) => {
       <section className={styles.contact}>
         <div>
           <span className={styles.bold}>Would you like to work with me?</span>
-          &nbsp;Send me an e-mail at <button>kristjanposka@gmail.com</button>!
+          &nbsp;Send me an e-mail at kristjanposka@gmail.com
+          <button className="align-middle ml-1" onClick={copyContent}>
+            {copyIcon}
+          </button>
         </div>
         <div>
           <span className={styles.bold}>Want to see more of what I do?</span>

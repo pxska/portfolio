@@ -12,7 +12,7 @@ export default function App({Component, pageProps}) {
   return (
     <>
       <Head>
-        <title>Kristjan Poska</title>
+        <title>Kristjan Poska ~ Design Engineer</title>
 
         <link
           rel="icon"
@@ -30,7 +30,7 @@ export default function App({Component, pageProps}) {
 
         <meta
           name="description"
-          content="Kristjan Poska is a talented front-end developer and interaction design student with a passion for creating beautiful and user-friendly digital experiences. Learn more about Kristjan and his impressive skills and experience in web development and design."
+          content="Kristjan Poska is a talented design engineer and interaction design student with a passion for creating beautiful and user-friendly digital experiences."
         />
 
         <meta name="theme-color" content="#F2F1EF" />
