@@ -34,7 +34,17 @@ export default function App({Component, pageProps}) {
         />
 
         <meta name="theme-color" content="#F2F1EF" />
+
+        <meta property="og:title" content="Kristjan Poska ~ Design Engineer" />
+
+        <meta
+          property="og:description"
+          content="Kristjan Poska is a talented design engineer and interaction design student with a passion for creating beautiful and user-friendly digital experiences."
+        />
+
+        <meta property="og:image" content="/images/og-image.png" />
       </Head>
+
       <style jsx global>{`
         :root {
           --font-main: ${inter.style.fontFamily}, sans-serif;

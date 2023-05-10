@@ -3,7 +3,6 @@ import fs from 'fs';
 import matter from 'gray-matter';
 
 import Card from '@components/Card';
-import Link from 'next/link';
 
 import styles from '@styles/Index.module.scss';
 
@@ -117,18 +116,23 @@ const Index = ({posts}) => {
       <section className={styles.contact}>
         <div>
           <span className={styles.bold}>Would you like to work with me?</span>
-          &nbsp;Send me an e-mail at kristjanposka@gmail.com
+          &nbsp;Send me an e-mail at{' '}
+          <a href="mailto:kristjanposka@gmail.com?subject=I want to work with you, Kristjan">
+            kristjanposka@gmail.com
+          </a>
           <button className="align-middle ml-1" onClick={copyContent}>
             {copyIcon}
           </button>
+          &nbsp;and I promise to get back to you as soon as possible.
         </div>
         <div>
           <span className={styles.bold}>Want to see more of what I do?</span>
           &nbsp;Check out my Twitter account&nbsp;
-          <Link href="https://twitter.com/kristjanposka">@kristjanposka</Link>
+          <a href="https://twitter.com/kristjanposka">@kristjanposka</a>
           &nbsp;or follow me on Instagram&nbsp;
-          <Link href="https://instagram.com/kristjanposka">@kristjanposka</Link>
-          .
+          <a href="https://instagram.com/kristjanposka">@kristjanposka</a>. You
+          can also check out my CV at{' '}
+          <a href="https://read.cv/poska">read.cv</a>.
         </div>
       </section>
     </div>
