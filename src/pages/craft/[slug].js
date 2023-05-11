@@ -71,9 +71,10 @@ const Project = ({frontmatter, content}) => {
 
       <p className={styles.hook}>{frontmatter.description}</p>
 
-      <section className={styles.projectDescription}>
-        <div dangerouslySetInnerHTML={{__html: md().render(content)}} />
-      </section>
+      <article
+        className={styles.projectDescription}
+        dangerouslySetInnerHTML={{__html: md().render(content)}}
+      />
     </div>
   );
 };

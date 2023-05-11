@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --color-dark: #333;
-  --color-dark-gray: #666;
-  --color-dark-gray-hover: #777;
+  --color-text-primary: #333;
+  --color-text-secondary: #858480;
 
   --color-gt: #E6252A;
   --color-vg: #443DF6;
@@ -24,7 +23,7 @@ html, body {
 
 body {
   font-family: var(--font-main);
-  color: var(--color-dark);
+  color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -38,6 +37,10 @@ em {
 a, button {
   text-decoration: underline;
   color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 ul {

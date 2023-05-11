@@ -21,7 +21,7 @@ $colors: #DCB481, #C09E85, #E0D0C3, #90837A, #B9B99D;
   line-height: 64px;
   text-decoration: none;
   font-weight: normal;
-  color: #858480;
+  color: var(--color-text-secondary);
   transition: color .075s;
 
   @media screen and (max-width: 1024px) {
@@ -30,7 +30,7 @@ $colors: #DCB481, #C09E85, #E0D0C3, #90837A, #B9B99D;
   }
 
   &:hover {
-    color: #333;
+    color: var(--color-text-primary);
   }
 }
 
@@ -67,7 +67,7 @@ $colors: #DCB481, #C09E85, #E0D0C3, #90837A, #B9B99D;
   }
 
   .description {
-    color: #858480;
+    color: var(--color-text-secondary);
   }
 }
 
@@ -102,82 +102,52 @@ $colors: #DCB481, #C09E85, #E0D0C3, #90837A, #B9B99D;
 }
 
 section.contact {
-  color: #858480;
+  color: var(--color-text-secondary);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
 
   .bold {
-    color: #333;
+    color: var(--color-text-primary);
     font-weight: bold;
   }
 }
 
 .hook {
-  color: #858480;
+  color: var(--color-text-secondary);
 }
 
 .projectDescription {
+  > * {
+    margin-bottom: 32px;
+  }
+
   h2 {
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 16px;
-
-    &:not(:first-child) {
-      margin-top: 32px;
-    }
   }
 
   h3 {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 8px;
-    margin-top: 16px;
   }
 
   h4 {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 8px;
-    margin-top: 16px;
   }
 
   blockquote {
-    color: gray;
+    color: var(--color-text-secondary);
     margin-left: 16px;
-    border-left: 1px solid gray;
+    border-left: 1px solid var(--color-text-secondary);
     padding-left: 8px;
-    margin: 16px 0;
-  }
-
-  img {
-    margin: 16px 0;
-  }
-
-  .postIts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 16px;
-
-    li {
-      color: #333;
-      background-color: #ffc;
-      display: block;
-      height: 160px;
-      width: 160px;
-      padding: 16px;
-      box-shadow: 4px 4px 8px #858480;
-    }
   }
 
   ul {
     list-style: square;
     list-style-position: inside;
-    margin: 16px 0;
-  }
-
-  p {
-    margin: 16px 0;
   }
 }
