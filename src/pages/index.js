@@ -94,7 +94,8 @@ const Index = ({posts}) => {
   return (
     <div className={styles.container}>
       <section className={styles.title}>
-        Kristjan Poska.&nbsp;
+        Kristjan Poska.
+        <br />
         <span className={styles.description}>
           A design engineer with a love for pushing boundaries.
         </span>

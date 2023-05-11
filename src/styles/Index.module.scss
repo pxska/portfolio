@@ -151,3 +151,14 @@ section.contact {
     list-style-position: inside;
   }
 }
+
+@media (max-width: 768px) {
+  .container {
+    gap: 32px;
+  }
+
+  .title, .description {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
