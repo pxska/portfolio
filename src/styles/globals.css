@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --color-text-primary: #333;
   --color-text-secondary: #858480;
+}
 
-  --color-gt: #E6252A;
-  --color-vg: #443DF6;
-  --color-ixd: #FB8B24;
-  --color-artun: #00D2A0;
+html[data-theme="light"] {
+  --color-background: #F2F1EF;
+  --color-text-primary: #333333;
+}
+
+html[data-theme="dark"] {
+  --color-background: #333333;
+  --color-text-primary: #F2F1EF;
 }
 
 * {
@@ -17,7 +21,7 @@
 }
 
 html, body {
-  background-color: #F2F1EF;
+  background-color: var(--color-background);
   margin: 0;
 }
 
