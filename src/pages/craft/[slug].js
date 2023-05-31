@@ -6,6 +6,12 @@ import BackLink from '@/components/BackLink';
 
 import styles from '@styles/Index.module.scss';
 
+if (typeof window !== 'undefined') {
+  const theme = localStorage.getItem('theme');
+
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
 export async function getStaticPaths() {
   try {
     const files = fs.readdirSync('public/posts');
