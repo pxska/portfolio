@@ -74,9 +74,19 @@ We then started ideating for solutions to answer that question.
 
 #### Redesigning the question
 
-Going through the process, we realised that it's not just about adults and Tallinners, but about everyone. This meant that…
+Going through the process, we realised that it's not just about adults and Tallinners, but about everyone. This meant that we had to spend some more time thinking about the question. We then ended up with:
 
 > How might we inspire different generations of Tallinners to exchange feelings and stories?
+
+## Ideas
+
+We had lots of different ideas, coming from our Lotus Blossoms and Crazy 8-s, but two of the ones that we tested were:
+
+* a painting canvas, where you and the other person get a prompt and then you paint together, later talk about how you feel etc;
+* a phone on the street, in the forest or where-ever, where you can vent your feelings – this is also the one that we went with.
+
+![Testing out the painting canvas idea](/images/paint-canvas-testing.jpg)
+
 
 ## Solution
 
@@ -85,3 +95,5 @@ The solution we came up with is called Phõõn. It consists of two words: phone 
 ![Image of an old rotary phone on a tree: Phõõn](/images/phoon.png)
 
 ## Results
+
+We finished the project with an applause after showing everyone our final video. Sure, everyone received an applause, but we felt that ours was the best.
