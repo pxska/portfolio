@@ -10,8 +10,9 @@ import Phone from '@assets/icons/phone.svg';
 import Bills from '@assets/icons/bills.svg';
 import Stocks from '@assets/icons/stocks.svg';
 import Note from '@assets/icons/note.svg';
+import Brain from '@assets/icons/brain.svg';
 
-import {BiCopy, BiCheck} from 'react-icons/bi';
+import {BiCopy, BiCheck, BiMoon, BiSun} from 'react-icons/bi';
 
 const COLORS = ['#DCB481', '#C09E85', '#E0D0C3', '#90837A', '#B9B99D'];
 
@@ -70,6 +71,8 @@ function getIcon(fmIcon) {
       return <Stocks />;
     case 'note':
       return <Note />;
+    case 'brain':
+      return <Brain />;
   }
 }
 
@@ -113,7 +116,7 @@ const Index = ({posts}) => {
         <button
           className={styles.themeButton}
           onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-          {theme === 'dark' ? '🌙' : '🌈'}
+          {theme === 'dark' ? <BiSun /> : <BiMoon />}
         </button>
 
         <section className={styles.title}>

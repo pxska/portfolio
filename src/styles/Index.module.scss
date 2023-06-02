@@ -103,6 +103,10 @@ $colors: #DCB481, #C09E85, #E0D0C3, #90837A, #B9B99D;
     grid-row: span 2;
   }
 
+  :nth-child(5) {
+    grid-column: span 2;
+  }
+
   :first-child {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
