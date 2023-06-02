@@ -59,7 +59,7 @@ export async function getStaticProps({params: {slug}}) {
 const Project = ({frontmatter, content}) => {
   return (
     <div className={styles.container}>
-      <section className={styles.title}>
+      <section className={styles.projectTitle}>
         <BackLink />
         <h1>{frontmatter.shortName}&nbsp;</h1>
         <span className={styles.description}>
