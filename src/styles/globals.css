@@ -20,6 +20,10 @@ html[data-theme="dark"] {
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 html, body {
   background-color: var(--color-background);
   margin: 0;
